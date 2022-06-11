@@ -6,8 +6,8 @@ const promiseOutput = async (emosi) => {
     let dataIXX = await promiseTheaterIXX();
     let dataVGC = await promiseTheaterVGC();
 
-    let emosiIXX = dataIXX.filter((judul) => judul.hasil === emosi);
-    let emosiVGC = dataVGC.filter((judul) => judul.hasil === emosi);
+    let emosiIXX = dataIXX.filter((film) => film.hasil === emosi);
+    let emosiVGC = dataVGC.filter((film) => film.hasil === emosi);
 
     return emosiIXX.length + emosiVGC.length;
   } catch (error) {
